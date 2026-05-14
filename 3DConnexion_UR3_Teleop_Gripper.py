@@ -191,7 +191,7 @@ def _parse_read_response(response: bytes, count: int = 1) -> list[int]:
 # ---------------------------------------------------------------------------
 
 class GripperController:
-     def __init__(self, port, baudrate, timeout, slave_id):
+    def __init__(self, port, baudrate, timeout, slave_id):
         self._slave_id   = slave_id
         self._lock       = Lock()
         self._worker     = None
@@ -207,7 +207,7 @@ class GripperController:
         if not self.ser.is_open:
             self.ser.open()
         print(f"AG-95 connected on {port} @ {baudrate} baud")
-        self._write_register(REG_SPEED, DEFAULT_SPEED)
+        self._write_register(REG_SPEED, DEFAULT_SPEED)\
 
     def _write_register(self, register: int, value: int):
         frame = _build_write_register(self._slave_id, register, value)
