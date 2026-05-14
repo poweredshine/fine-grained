@@ -40,22 +40,22 @@ COMMANDS = {
 
 # ====== Menu layout ======
 MENU = [
-    ("0", "motor_enable",    "Initialize gripper  (tunggu ~3 detik)"),
-    ("",  None,              "--- Force (atur sebelum gerak) ---"),
+    ("0", "motor_enable",    "Initialize gripper  (wait ~3 sec)"),
+    ("",  None,              "--- Force ---"),
     ("1", "force_20",        "Force 20%  (minimum)"),
     ("2", "force_25",        "Force 25%"),
     ("3", "force_50",        "Force 50%"),
     ("4", "force_100",       "Force 100%"),
     ("",  None,              "--- Posisi ---"),
-    ("5", "clamp_min",       "Tutup penuh  (0‰)"),
-    ("6", "pos_quarter",     "Buka 25%   (250‰)"),
-    ("7", "pos_half",        "Buka 50%   (500‰)"),
-    ("8", "pos_3quarter",    "Buka 75%   (750‰)"),
-    ("9", "clamp_max",       "Buka penuh (1000‰)"),
-    ("",  None,              "--- Baca status ---"),
-    ("r", "read_init_state", "Baca status inisialisasi"),
-    ("g", "read_grip_state", "Baca gripper state"),
-    ("p", "read_position",   "Baca posisi saat ini"),
+    ("5", "clamp_min",       "F  (0‰)"),
+    ("6", "pos_quarter",     "Open 25%   (250‰)"),
+    ("7", "pos_half",        "Open 50%   (500‰)"),
+    ("8", "pos_3quarter",    "Open 75%   (750‰)"),
+    ("9", "clamp_max",       "Open penuh (1000‰)"),
+    ("",  None,              "--- Read status ---"),
+    ("r", "read_init_state", "Read status inisialisasi"),
+    ("g", "read_grip_state", "Read gripper state"),
+    ("p", "read_position",   "Read posisi saat ini"),
 ]
 
 ser = None
